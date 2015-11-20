@@ -9,3 +9,13 @@ def fibs(n)
   end
   result
 end
+
+def fibs_rec(n)
+  if n == 1
+    [0]
+  elsif n == 2
+    [0, 1]
+  else
+    fibs_rec(n - 1) << (fibs_rec(n - 2).last + fibs_rec(n - 1).last)
+  end
+end
