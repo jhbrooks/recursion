@@ -11,7 +11,12 @@ def fibs(n)
 end
 
 def fibs_rec(n)
-  if n == 1
+  # alternate one line solution
+  # n <= 2 ? Array.new(n) { |i| i } : fibs_rec(n - 1) << (fibs_rec(n - 2).last + fibs_rec(n - 1).last)
+
+  if n == 0
+    []
+  elsif n == 1
     [0]
   elsif n == 2
     [0, 1]
